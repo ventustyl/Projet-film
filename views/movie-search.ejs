@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include ('./partials/header') %>
+        <div class="central">
+            <h1>
+                Recherche dans l'API
+        </div>
+        <div>
+            <input type="text" name="term" id="term" placeholder="titre de film">
+            <button id="btnSearch">rechercher</button>
+        </div>
+        <div id="results">
+
+        </div>
+        <%- include ('./partials/footer') %>
+            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+            <script>
+                const API_KEY = "1baf0df6b9381ecc71696956aef34199";
+                const term = document.querySelector('#term');
+                const btnSearch = document.querySelector('#btnSearch');
+                btnSearch.addEventListener('click', search);
+                let resultsDiv = document.querySelector('#results');
+                function search() {
+                    const query = `https://api.themoviedb.org/3/search/movie/?api_key=${API_KEY}&query=${term.value}&language=fr-FR`;
+                    axios.get(query)
+                    .then(function(response) {
+                        console.log(response)
+                        displayResults(response.data.results)
+                    })
+                }
+                function displayResults(results){
+                    resultsDiv.innerHTML= '';
+                    for (let result of results){
+                        let movieDiv = document.createElement('div');
+                        let descrip = document.createElement('p');
+                        movieDiv.innerHTML =result.title  
+                        descrip.innerHTML = result.overview;
+                        movieDiv.style.marginTop = "50px";
+                        movieDiv.style.fontSize = "30px";
+                        movieDiv.style.color = "red";
+                        descrip.style.marginTop = "20px";
+                        console.log(descrip)
+                        resultsDiv.appendChild(movieDiv);
+                        resultsDiv.appendChild(descrip);
+                        
+           
+                    }
+                }
+
+            </script>
+</body>
+
+</html>

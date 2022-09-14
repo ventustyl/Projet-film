@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Movies</title>
+</head>
+
+<body>
+    <%- include ('./partials/header') %>
+        <div class="central">
+            <h1>
+                <%= title %>
+            </h1>
+            <div class="french-movies">
+                <% for(movie of movies) {%>
+                    <div class="alignement">
+                        <%= movie.title%>
+                            <%= movie.year%>
+                    </div>
+                    <%} %>
+            </div>
+        </div>
+
+        <div>
+            <form action="/movies" method="post">
+                <label for="movietitle">Titre du film</label>
+                <input type="text" name="movietitle" id="movietitle">
+                <label for="movieyear">Année du film</label>
+                <input type="number" name="movieyear" id="movieyear">
+                <button type="submit">Ajouter</button>
+            </form>
+        </div>
+        <%- include ('./partials/footer') %>
+
+
+            <script>
+                const form = document.querySelector('form');
+                form.addEventListener('submit', addMovie);
+                function addMovie(event) {
+                    event.preventDefault();
+                    if (fetch) {
+                        fetch('/Movies', {
+                            method: 'POST',
+                            body: new FormData(form)
+                        })
+                            .then(checkStatus)
+                            .catch(function (error) {
+                                console.error('request failed', error)
+                            })
+                    } else {
+                       //
+                    }
+                }
+
+                function checkStatus(response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        let newMovieDiv = document.createElement('div');
+                        newMovieDiv.classList.add("alignement");
+                        const movietitle = document.getElementById('movietitle').value;
+                        const movieyear = document.getElementById('movieyear').value;
+                        newMovieDiv.innerHTML = `${movietitle} (${movieyear})`;
+                        document.querySelector('.french-movies').appendChild(newMovieDiv);
+                        form.reset();
+                    }
+                }
+            </script>
+</body>
+
+</html>
