@@ -1,57 +1,153 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
 }
 
-h1 {
-    text-align: center;
-    font-size: 30px;
-    color: blue;
+body {
+  overflow-x: hidden;
+  background: black;
+  min-height: 100vh;
+
 }
 
 .alignement {
-    text-align: center;
-}
-.logo{
-    max-height: 70px;
-    object-fit: contain;
-    width: 100%;
-}
-.header {
-    width: 100%;
-    background-image: url(../img/espace.jpg);
-    background-size: contain;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-height: 80px;
-    animation: back 20s infinite;
+  text-align: center;
 }
 
-@keyframes back {
-    0% {
-        background-size: 100% auto;
-    }
-    50% {
-        background-size: 110% auto;
-    }
-    100% {
-        background-size: 100% auto;
-    }
-}
-nav{
-    width: 60%;
-    display: flex;
-    justify-content: space-around;
+header {
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+
 }
 
-a{
-    color: white;
-    text-decoration: none;
+.logo {
+  color: red;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
 }
-.central {
-    min-height: 300px;
 
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.navigation li {
+  list-style: none;
+}
+
+.navigation li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: white;
+  border-radius: 20px;
+}
+
+button {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: white;
+  border-radius: 20px;
+  background: black;
+}
+
+.navigation li a:hover {
+  background: white;
+  color: red;
+}
+
+.navigation li a.active {
+  background: white;
+  color: red;
+}
+
+#connectionLink {
+  color: white;
+}
+.marvel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 93vh;
+  background-image: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.9) 18%, rgba(45,45,45,0.9) 82%, rgba(0,0,0,0.7) 100%), url('../img/avengers-infinity-war.jpg');
+  background-size:100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+}
+
+.marvel img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 40%;
+
+  pointer-events: none;
+}
+
+#text {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  color: red;
+  font-size: 4em;
+}
+
+.sec {
+  position: relative;
+  color: white;
+  padding: 100px;
+}
+#widow {
+  left: 70%;
+}
+#thor {
+  top: 50px;
+  left: 70%;
+}
+#marvel {
+  left: 40%;
+}
+#iron {
+  top: 20px;
+  left: 10%;
+}
+#hulk {
+  left: 40%;
+  top: 10px;
+}
+.sec h2 {
+  font-size: 3em;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.sec p {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+p {
+  columns: 2;
+}
+
+.p-sortie {
+  color:grey;
+}
+
+.p-ordre {
+ color: blue;
 }

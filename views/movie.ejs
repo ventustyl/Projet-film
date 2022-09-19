@@ -18,8 +18,8 @@
             <div class="french-movies">
                 <% for(movie of movies) {%>
                     <div class="alignement">
-                        <%= movie.title%>
-                            <%= movie.year%>
+                        <%= movie.movietitle%>
+                            <%= movie.movieyear%>
                     </div>
                     <%} %>
             </div>
@@ -39,21 +39,28 @@
 
             <script>
                 const form = document.querySelector('form');
+               
+               
                 form.addEventListener('submit', addMovie);
                 function addMovie(event) {
                     event.preventDefault();
-                    if (fetch) {
-                        fetch('/Movies', {
-                            method: 'POST',
-                            body: new FormData(form)
-                        })
-                            .then(checkStatus)
-                            .catch(function (error) {
-                                console.error('request failed', error)
+                    const var1 = document.querySelector('#movietitle').value
+                    const var2 = document.querySelector('#movieyear').value
+                    if (var1 != '' && var2 !='') {
+                        console.log(var1)
+                        if (fetch) {
+                            fetch('/Movies', {
+                                method: 'POST',
+                                body: new FormData(form)
                             })
-                    } else {
-                       //
-                    }
+                                .then(checkStatus)
+                                .catch(function (error) {
+                                    console.error('request failed', error)
+                                })
+                        } else {
+                            //
+                        }
+                    }else {}
                 }
 
                 function checkStatus(response) {
