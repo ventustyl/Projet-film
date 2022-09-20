@@ -9,7 +9,7 @@
             scrollTrigger : {
                 scrub: true
             },
-            y:1000, duration: 2
+            y:500, duration: 2
         })
         gsap.from("#thor",{
             scrollTrigger : {

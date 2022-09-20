@@ -6,159 +6,184 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
- 
-
-<title>Express JS Movies</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title>Express JS Movies</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/locomotive-scroll.css">
 </head>
 
 <body>
+    <div data-scroll-container>
+        <%- include ('./partials/header') %>
+            <div class="central">
 
-    <%- include ('./partials/header') %>
-    <div class="central">
-   
-<section class="marvel">
-    <h2 id="text">Marvel Cinématic Universe</h2>
-    <img src="./img/black-widow.png" id="widow">
-    <img src="./img/captain marvel.png" id="marvel">
-    <img src="./img/hulk.png" id="hulk">
-    <img src="./img/iron man.png" id="iron">
-    <img src="./img/thor.png" id="thor">
-    <img src="./img/deadpool.png" id="pool">
-</section>
-<hr>
-<section class="sec">
-  
-    <h2>Marvel vous en met plein la vue</h2>
-    <button class="ordre">Ordre chronologique</button>
-    <button class="sortie">Ordre de sortie</button>
-    <p class="p-ordre">Captain America : The First Avenger (2011 - film)<br>
-        Marvel's Agent Carter Saison 1 (2015 - série télévisée Marvel)<br>
-        Marvel's Agent Carter Saison 2 (2016 - série télévisée Marvel)<br>
-        Captain Marvel (2019 - film)<br>
-        Iron Man (2008 - film)<br>
-        Iron Man 2 (2010 - film)<br>
-        L'Incroyable Hulk (2008 - film)<br>
-        Thor (2011 - film)<br>
-        The Avengers (2012 - film)<br>
-        Iron Man 3 (2013 - film)<br>
-        Thor : Le Monde des ténèbres (2013 - film)<br>
-        Captain America : The Winter Soldier (2014 - film)<br>
-        Marvel's Agents of S.H.I.E.L.D Season 1 (2013 - émission de télévision Marvel)<br>
-        Les Gardiens de la Galaxie (2014 - film)<br>
-        Les Gardiens de la Galaxie Vol. 2 (2017 - film)<br>
-        Daredevil Saison 1 (2015 - série télévisée Marvel)<br>
-        Avengers : Age of Ultron (2015 - film)<br>
-        Marvel's Agents of S.H.I.E.L.D Saison 2 (2014 - série télévisée Marvel)<br>
-        Ant-Man (2015 - film)<br>
-        Jessica Jones Saison 1 (2015 - série TV)<br>
-        Daredevil Saison 2 (2016 - série télévisée)<br>
-        Captain America : Civil War (2016 - film)<br>
-        Marvel's Agents of S.H.I.E.L.D Saison 3 (2015 - série télévisée Marvel)<br>
-        Luke Cage Saison 1 (2016 - série télévisée Marvel)<br>
-        Spider-Man : Homecoming (2017 - film)<br>
-        Doctor Strange (2016 - film)<br>
-        Black Panther (2018 - film)<br>
-        Iron Fist Saison 1 (2017 - série télévisée)<br>
-        Marvel's Agents of S.H.I.E.L.D Saison 4 (2016 - série télévisée Marvel)<br>
-        The Defenders Saison 1 (2017 - série télévisée Marvel)<br>
-        Les Inhumains Saison 1 (2017 - série télévisée Marvel)<br>
-        Thor : Ragnarok (2017 - film)<br>
-        Jessica Jones Saison 2 (2018 - Marvel Television show)<br>
-        Luke Cage Saison 2 (2018 - Marvel Television show)<br>
-        Cloak and Dagger Saison 1 (2018 - série télévisée Marvel)<br>
-        Daredevil saison 3 (2018 - série télévisée Marvel)<br>
-        The Punisher Saison 2 (2019 - Marvel Television show)<br>
-        Marvel's Agents of S.H.I.E.L.D Saison 5 (2017 - Marvel Television show)<br>
-        Iron Fist Saison 2 (2018 - série télévisée Marvel)<br>
-        Ant-Man et la Guêpe (2018 - film)<br>
-        Black Widow (2021 - film)<br>
-        Marvel's Agents of S.H.I.E.L.D Saison 6 (2019 - série télévisée Marvel)<br>
-        Marvel's Agents of S.H.I.E.L.D Season 7 (2020 - Marvel Television show)<br>
-        Avengers Infinity War (2018 - film)<br>
-        Avengers : Endgame (2019 - film)<br>
-        Loki (2021 - Disney+ TV show)<br>
-        What if... ? (2022 - émission TV Disney+)<br>
-        WandaVision (2021 - émission TV Disney+)<br>
-        Spider-Man : Far From Home (2019 - film)<br>
-        Le Faucon et le Soldat de l'Hiver (2021 - émission TV Disney+)<br>
-        Shang-Chi et la légende des dix anneaux (2021 - film)<br>
-        Eternals (2021 - film)<br>
-        Spider-Man : No Way Home (2021 - film)<br>
-        Hawkeye (2021 - émission TV Disney+)<br>
-        Moon Knight (2022 - émission TV Disney+)<br>
-        Doctor Strange dans le Multivers de la Folie (2022 - film)<br>
-        Miss Marvel (2022 - émission TV Disney+)<br>
-        She Hulk (2022 - émission TV Disney+)<br></p>
+                <section class="marvel">
+                    <h2 id="text">Marvel Cinématic Universe</h2>
+                    <img data-scroll data-scroll-speed="-6" data-scroll-direction="horizontal" data-scroll class="appear"
+                        src="./img/black-widow.png" id="widow">
+                    <img data-scroll data-scroll-speed="8" data-scroll-direction="vertical" src="./img/captain marvel.png" id="marvel">
+                    <img src="./img/hulk.png" id="hulk">
+                    <img src="./img/iron man.png" id="iron">
+                    <img data-scroll data-scroll-speed="8" data-scroll-direction="vertical" src="./img/thor.png" id="thor">
+                    <img src="./img/deadpool.png" id="pool">
+                </section>
+
+                <section class="sec">
+                    <h2 data-scroll data-scroll-speed="-6" data-scroll-direction="horizontal"
+                        data-scroll-position="left">Marvel vous en met plein la vue</h2>
+                    <button class="ordre">Ordre chronologique</button>
+                    <button class="sortie">Ordre de sortie</button>
+                    <p data-scroll data-scroll-speed="4" class="p-ordre">Captain America : The First Avenger (2011 -
+                        film)<br>
+                        Marvel's Agent Carter Saison 1 (2015 - série télévisée Marvel)<br>
+                        Marvel's Agent Carter Saison 2 (2016 - série télévisée Marvel)<br>
+                        Captain Marvel (2019 - film)<br>
+                        Iron Man (2008 - film)<br>
+                        Iron Man 2 (2010 - film)<br>
+                        L'Incroyable Hulk (2008 - film)<br>
+                        Thor (2011 - film)<br>
+                        The Avengers (2012 - film)<br>
+                        Iron Man 3 (2013 - film)<br>
+                        Thor : Le Monde des ténèbres (2013 - film)<br>
+                        Captain America : The Winter Soldier (2014 - film)<br>
+                        Marvel's Agents of S.H.I.E.L.D Season 1 (2013 - émission de télévision Marvel)<br>
+                        Les Gardiens de la Galaxie (2014 - film)<br>
+                        Les Gardiens de la Galaxie Vol. 2 (2017 - film)<br>
+                        Daredevil Saison 1 (2015 - série télévisée Marvel)<br>
+                        Avengers : Age of Ultron (2015 - film)<br>
+                        Marvel's Agents of S.H.I.E.L.D Saison 2 (2014 - série télévisée Marvel)<br>
+                        Ant-Man (2015 - film)<br>
+                        Jessica Jones Saison 1 (2015 - série TV)<br>
+                        Daredevil Saison 2 (2016 - série télévisée)<br>
+                        Captain America : Civil War (2016 - film)<br>
+                        Marvel's Agents of S.H.I.E.L.D Saison 3 (2015 - série télévisée Marvel)<br>
+                        Luke Cage Saison 1 (2016 - série télévisée Marvel)<br>
+                        Spider-Man : Homecoming (2017 - film)<br>
+                        Doctor Strange (2016 - film)<br>
+                        Black Panther (2018 - film)<br>
+                        Iron Fist Saison 1 (2017 - série télévisée)<br>
+                        Marvel's Agents of S.H.I.E.L.D Saison 4 (2016 - série télévisée Marvel)<br>
+                        The Defenders Saison 1 (2017 - série télévisée Marvel)<br>
+                        Les Inhumains Saison 1 (2017 - série télévisée Marvel)<br>
+                        Thor : Ragnarok (2017 - film)<br>
+                        Jessica Jones Saison 2 (2018 - Marvel Television show)<br>
+                        Luke Cage Saison 2 (2018 - Marvel Television show)<br>
+                        Cloak and Dagger Saison 1 (2018 - série télévisée Marvel)<br>
+                        Daredevil saison 3 (2018 - série télévisée Marvel)<br>
+                        Marvel's Agents of S.H.I.E.L.D Saison 5 (2017 - Marvel Television show)<br>
+                        Iron Fist Saison 2 (2018 - série télévisée Marvel)<br>
+                        Ant-Man et la Guêpe (2018 - film)<br>
+                        Black Widow (2021 - film)<br>
+                        Marvel's Agents of S.H.I.E.L.D Saison 6 (2019 - série télévisée Marvel)<br>
+                        Marvel's Agents of S.H.I.E.L.D Season 7 (2020 - Marvel Television show)<br>
+                        Avengers Infinity War (2018 - film)<br>
+                        Avengers : Endgame (2019 - film)<br>
+                        Loki (2021 - Disney+ TV show)<br>
+                        What if... ? (2022 - émission TV Disney+)<br>
+                        WandaVision (2021 - émission TV Disney+)<br>
+                        Spider-Man : Far From Home (2019 - film)<br>
+                        Le Faucon et le Soldat de l'Hiver (2021 - émission TV Disney+)<br>
+                        Shang-Chi et la légende des dix anneaux (2021 - film)<br>
+                        Eternals (2021 - film)<br>
+                        Spider-Man : No Way Home (2021 - film)<br>
+                        Hawkeye (2021 - émission TV Disney+)<br>
+                        Moon Knight (2022 - émission TV Disney+)<br>
+                        Doctor Strange dans le Multivers de la Folie (2022 - film)<br>
+                        Miss Marvel (2022 - émission TV Disney+)<br>
+                        She Hulk (2022 - émission TV Disney+)<br></p>
 
 
-        <p class="p-sortie">Captain America : The First Avenger (2011 - film)<br>
-            Marvel's Agent Carter Saison 1 (2015 - série télévisée Marvel)<br>
-            Marvel's Agent Carter Saison 2 (2016 - série télévisée Marvel)<br>
-            Captain Marvel (2019 - film)<br>
-            Iron Man (2008 - film)<br>
-            Iron Man 2 (2010 - film)<br>
-            L'Incroyable Hulk (2008 - film)<br>
-            Thor (2011 - film)<br>
-            The Avengers (2012 - film)<br>
-            Iron Man 3 (2013 - film)<br>
-            Thor : Le Monde des ténèbres (2013 - film)<br>
-            Captain America : The Winter Soldier (2014 - film)<br>
-            Marvel's Agents of S.H.I.E.L.D Season 1 (2013 - émission de télévision Marvel)<br>
-            Les Gardiens de la Galaxie (2014 - film)<br>
-            Les Gardiens de la Galaxie Vol. 2 (2017 - film)<br>
-            Daredevil Saison 1 (2015 - série télévisée Marvel)<br>
-            Avengers : Age of Ultron (2015 - film)<br>
-            Marvel's Agents of S.H.I.E.L.D Saison 2 (2014 - série télévisée Marvel)<br>
-            Ant-Man (2015 - film)<br>
-            Jessica Jones Saison 1 (2015 - série TV)<br>
-            Daredevil Saison 2 (2016 - série télévisée)<br>
-            Captain America : Civil War (2016 - film)<br>
-            Marvel's Agents of S.H.I.E.L.D Saison 3 (2015 - série télévisée Marvel)<br>
-            Luke Cage Saison 1 (2016 - série télévisée Marvel)<br>
-            Spider-Man : Homecoming (2017 - film)<br>
-            Doctor Strange (2016 - film)<br>
-            Black Panther (2018 - film)<br>
-            Iron Fist Saison 1 (2017 - série télévisée)<br>
-            Marvel's Agents of S.H.I.E.L.D Saison 4 (2016 - série télévisée Marvel)<br>
-            The Defenders Saison 1 (2017 - série télévisée Marvel)<br>
-            Les Inhumains Saison 1 (2017 - série télévisée Marvel)<br>
-            Thor : Ragnarok (2017 - film)<br>
-            Jessica Jones Saison 2 (2018 - Marvel Television show)<br>
-            Luke Cage Saison 2 (2018 - Marvel Television show)<br>
-            Cloak and Dagger Saison 1 (2018 - série télévisée Marvel)<br>
-            Daredevil saison 3 (2018 - série télévisée Marvel)<br>
-            The Punisher Saison 2 (2019 - Marvel Television show)<br>
-            Marvel's Agents of S.H.I.E.L.D Saison 5 (2017 - Marvel Television show)<br>
-            Iron Fist Saison 2 (2018 - série télévisée Marvel)<br>
-            Ant-Man et la Guêpe (2018 - film)<br>
-            Black Widow (2021 - film)<br>
-            Marvel's Agents of S.H.I.E.L.D Saison 6 (2019 - série télévisée Marvel)<br>
-            Marvel's Agents of S.H.I.E.L.D Season 7 (2020 - Marvel Television show)<br>
-            Avengers Infinity War (2018 - film)<br>
-            Avengers : Endgame (2019 - film)<br>
-            Loki (2021 - Disney+ TV show)<br>
-            What if... ? (2022 - émission TV Disney+)<br>
-            WandaVision (2021 - émission TV Disney+)<br>
-            Spider-Man : Far From Home (2019 - film)<br>
-            Le Faucon et le Soldat de l'Hiver (2021 - émission TV Disney+)<br>
-            Shang-Chi et la légende des dix anneaux (2021 - film)<br>
-            Eternals (2021 - film)<br>
-            Spider-Man : No Way Home (2021 - film)<br>
-            Hawkeye (2021 - émission TV Disney+)<br>
-            Moon Knight (2022 - émission TV Disney+)<br>
-            Doctor Strange dans le Multivers de la Folie (2022 - film)<br>
-            Miss Marvel (2022 - émission TV Disney+)<br>
-            She Hulk (2022 - émission TV Disney+)<br></p>
+                    <p class="p-sortie">L'Incroyable Hulk (2008 - film)<br>
+                        Iron Man (2008 - film)<br>
+                        Iron Man 2 (2010 - film)<br>
+                        Captain America : The First Avenger (2011 - film)<br>
+                        Thor (2011 - film)<br>
+                        The Avengers (2012 - film)<br>
+                        Thor : Le Monde des ténèbres (2013 - film)<br>
+                        Iron Man 3 (2013 - film)<br>
+                        Marvel's Agents of S.H.I.E.L.D Season 1 (2013 - émission de télévision Marvel)<br>
+                        Captain America : The Winter Soldier (2014 - film)<br>
+                        Marvel's Agents of S.H.I.E.L.D Saison 2 (2014 - série télévisée Marvel)<br>
+                        Les Gardiens de la Galaxie (2014 - film)<br>
+                        Daredevil Saison 1 (2015 - série télévisée Marvel)<br>
+                        Jessica Jones Saison 1 (2015 - série TV)<br>
+                        Avengers : Age of Ultron (2015 - film)<br>
+                        Marvel's Agents of S.H.I.E.L.D Saison 3 (2015 - série télévisée Marvel)<br>
+                        Marvel's Agent Carter Saison 1 (2015 - série télévisée Marvel)<br>
+                        Ant-Man (2015 - film)<br>
+                        Marvel's Agent Carter Saison 2 (2016 - série télévisée Marvel)<br>
+                        Daredevil Saison 2 (2016 - série télévisée)<br>
+                        Captain America : Civil War (2016 - film)<br>
+                        Marvel's Agents of S.H.I.E.L.D Saison 4 (2016 - série télévisée Marvel)<br>
+                        Luke Cage Saison 1 (2016 - série télévisée Marvel)<br>
+                        Doctor Strange (2016 - film)<br>
+                        Spider-Man : Homecoming (2017 - film)<br>
+                        Iron Fist Saison 1 (2017 - série télévisée)<br>
+                        Les Gardiens de la Galaxie Vol. 2 (2017 - film)<br>
+                        Thor : Ragnarok (2017 - film)<br>
+                        The Defenders Saison 1 (2017 - série télévisée Marvel)<br>
+                        Marvel's Agents of S.H.I.E.L.D Saison 5 (2017 - Marvel Television show)<br>
+                        Jessica Jones Saison 2 (2018 - Marvel Television show)<br>
+                        Luke Cage Saison 2 (2018 - Marvel Television show)<br>
+                        Cloak and Dagger Saison 1 (2018 - série télévisée Marvel)<br>
+                        Daredevil saison 3 (2018 - série télévisée Marvel)<br>
+                        Black Panther (2018 - film)<br>
+                        Iron Fist Saison 2 (2018 - série télévisée Marvel)<br>
+                        Ant-Man et la Guêpe (2018 - film)<br>
+                        Avengers Infinity War (2018 - film)<br>
+                        Captain Marvel (2019 - film)<br>
+                        Avengers : Endgame (2019 - film)<br>
+                        Spider-Man : Far From Home (2019 - film)<br>
+                        Marvel's Agents of S.H.I.E.L.D Saison 6 (2019 - série télévisée Marvel)<br>
+                        Marvel's Agents of S.H.I.E.L.D Season 7 (2020 - Marvel Television show)<br>
+                        WandaVision (2021 - émission TV Disney+)<br>
+                        Loki (2021 - Disney+ TV show)<br>
+                        Le Faucon et le Soldat de l'Hiver (2021 - émission TV Disney+)<br>
+                        Black Widow (2021 - film)<br>
+                        Shang-Chi et la légende des dix anneaux (2021 - film)<br>
+                        Eternals (2021 - film)<br>
+                        Hawkeye (2021 - émission TV Disney+)<br>
+                        Moon Knight (2022 - émission TV Disney+)<br>
+                        Spider-Man : No Way Home (2021 - film)<br>
+                        What if... ? (2022 - émission TV Disney+)<br>
+                        Doctor Strange dans le Multivers de la Folie (2022 - film)<br>
+                        Miss Marvel (2022 - émission TV Disney+)<br>
+                        She Hulk (2022 - émission TV Disney+)<br>
+                    </p>
 
-</section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com /ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
-<script src="../script.js" ></script>
+                </section>
+                <%- include ('./partials/footer') %>
+
+
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com /ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+                    <script src="../script.js"></script>
+                    <script src="../locomotive.js"></script>
+                    <script>
+                        const scroll = new LocomotiveScroll({
+                            el: document.querySelector("[data-scroll-container]"),
+                            smooth: true,
+                            tablet: { smooth: true },
+                            smartphone: { smooth: true },
+                        });
+
+                        // Body color
+                        scroll.on("scroll", () => {
+                            if (document.querySelector("#color.is-inview")) {
+                                document.body.style.background = "#000101";
+                                document.body.style.color = "#fefeff";
+                            } else {
+                                document.body.style.background = "#fefeff";
+                                document.body.style.color = "#000101";
+                            }
+                        });
+                    </script>
+            </div>
+    </div>
+
 </body>
 
 </html>

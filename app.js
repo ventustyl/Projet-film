@@ -14,8 +14,8 @@ const jwt = require('jsonwebtoken');
 // --------------- Faker données fausses données
 // const { faker } = require('@faker-js/faker');
 // faker.locale = "fr";
-
 const { expressjwt: expressJwt } = require("express-jwt");
+
 
 
 // getting-started.js
@@ -23,7 +23,7 @@ const mongoose = require('mongoose');
 
 
 
-mongoose.connect('mongodb://localhost:27017/MarvelBDD')
+mongoose.connect('mongodb://127.0.0.1:27017/MarvelBDD')
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error: cannot connect to BD'));
 db.once('open', () => {

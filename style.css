@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body {
+    overflow-x: hidden;
+    background: black;
+    min-height: 100vh;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex ;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 1000;
+
+}
+
+.logo {
+    color: red;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+gap: 40px;
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+
+}
+
+.navigation li a:hover {
+    background: white;
+    color: red;
+}
+
+.navigation li a.active {
+    background: white;
+    color: red;
+}
+
+.marvel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.marvel img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 40%;
+
+    pointer-events: none;
+}
+
+#text {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    color: red;
+    font-size: 4em;
+}
+
+.sec {
+    position: relative;
+    color: white;
+    padding: 100px;
+
+}
+#widow{
+    left:70%
+}
+#thor {
+    top: 50px;
+    left: 70%; 
+}
+#marvel {
+    left: 40%;
+}
+#iron {
+    top:20px;
+    left: 10%
+}
+#hulk {
+    left: 40%;
+    top: 10px;
+}
+.sec h2 {
+    font-size: 3em;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.sec p{
+    font-size: 1em;
+    font-weight: 300;
+}
+
+p {
+    columns: 2;
+}
